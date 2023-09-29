@@ -5,7 +5,8 @@ import Example4 from "./example/example4";
 import Example5 from "./example/example5";
 import Example6 from "./example/example6";
 import Example7 from "./example/example7";
+import Example8 from "./example/example8";
 
 export default function App() {
-  return <Example7 />
+  return <Example8 />
 }
