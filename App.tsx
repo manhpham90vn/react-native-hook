@@ -6,7 +6,23 @@ import Example5 from "./example/example5";
 import Example6 from "./example/example6";
 import Example7 from "./example/example7";
 import Example8 from "./example/example8";
+import Example9, {ThemeContext} from "./example/example9";
+import {useState} from "react";
 
 export default function App() {
-  return <Example8 />
+
+  const [theme, setTheme] = useState('dark')
+
+  const onChangeTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark'
+    setTheme(newTheme)
+  }
+
+  console.log('render App')
+
+  return (
+      <ThemeContext.Provider value={theme}>
+        <Example9 onChangeTheme={onChangeTheme} />
+      </ThemeContext.Provider>
+  )
 }
