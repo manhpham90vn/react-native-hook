@@ -20,8 +20,13 @@ export const ThemeProvider: FC<Props> = ({ children }) => {
         setTheme(newTheme)
     }
 
+    const value: ThemeType = {
+        theme: theme,
+        setTheme: onChangeTheme
+    }
+
     return (
-        <ThemeContext.Provider value={{theme: theme, setTheme: onChangeTheme}}>
+        <ThemeContext.Provider value={value}>
             {children}
         </ThemeContext.Provider>
     )
