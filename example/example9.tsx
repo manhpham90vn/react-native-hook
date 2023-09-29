@@ -1,13 +1,14 @@
 import {Button, Text, View} from "react-native";
-import {createContext, useContext} from "react";
+import {useContext} from "react";
+import {ThemeContext, ThemeType} from "./ThemeContext";
 
-export const ThemeContext = createContext('')
+const Example9 = () => {
 
-type Example9Props = {
-    onChangeTheme: () => void
-}
+    const {setTheme} = useContext(ThemeContext) as ThemeType
 
-const Example9 = ({onChangeTheme}: Example9Props) => {
+    const onChangeTheme = () => {
+        setTheme()
+    }
 
     console.log('render Example9')
 
@@ -26,7 +27,7 @@ type ExampleProps = {
 const Example = () => {
 
     // lấy ra data từ Context
-    const theme = useContext(ThemeContext)
+    const { theme } = useContext(ThemeContext) as ThemeType
 
     console.log('render Example')
 
