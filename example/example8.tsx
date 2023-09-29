@@ -1,5 +1,5 @@
 import {Button, TextInput, View} from "react-native";
-import {Reducer, useCallback, useReducer} from "react";
+import {useReducer} from "react";
 
 interface Data {
     email: string,
