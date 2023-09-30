@@ -8,11 +8,15 @@ import Example7 from "./example/example7";
 import Example8 from "./example/example8";
 import Example9 from "./example/example9";
 import {ThemeProvider} from "./example/ThemeContext";
+import Example10 from "./example/example10";
+import {AuthProvider} from "./example/AuthContext";
 
 export default function App() {
   return (
-      <ThemeProvider>
-          <Example9 />
-      </ThemeProvider>
+      <AuthProvider>
+          <ThemeProvider>
+              <Example10 />
+          </ThemeProvider>
+      </AuthProvider>
   )
 }
