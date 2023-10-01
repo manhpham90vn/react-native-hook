@@ -10,12 +10,16 @@ import Example9 from "./example/example9";
 import {ThemeProvider} from "./example/ThemeContext";
 import Example10 from "./example/example10";
 import {AuthProvider} from "./example/AuthContext";
+import Example11 from "./example/example11";
+import {SessionProvider} from "./example/SessionContext";
 
 export default function App() {
   return (
       <AuthProvider>
           <ThemeProvider>
-              <Example10 />
+              <SessionProvider>
+                  <Example11 />
+              </SessionProvider>
           </ThemeProvider>
       </AuthProvider>
   )
