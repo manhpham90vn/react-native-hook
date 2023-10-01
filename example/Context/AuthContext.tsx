@@ -29,14 +29,6 @@ interface LogoutAction {
 
 type AuthAction = LoginAction | LogoutAction
 
-export const login = (payload: LoginPayload): LoginAction => {
-    return {type: AuthActionKind.LoginAction, payload: payload}
-}
-
-export const logout = (): LogoutAction => {
-    return {type: AuthActionKind.LogoutAction}
-}
-
 interface ContextType {
     state: AuthState,
     dispatch: Dispatch<AuthAction>
@@ -76,4 +68,12 @@ export const AuthProvider: FC<Props> = ({ children }) => {
 export const useAuth = () => {
     const {state, dispatch} = useContext(AuthContext)
     return {state, dispatch}
+}
+
+export const login = (payload: LoginPayload): LoginAction => {
+    return {type: AuthActionKind.LoginAction, payload: payload}
+}
+
+export const logout = (): LogoutAction => {
+    return {type: AuthActionKind.LogoutAction}
 }

@@ -10,10 +10,6 @@ export interface SessionType {
 
 const SessionContext = createContext<SessionType | null>(null)
 
-export const useSession = () => {
-    return useContext(SessionContext);
-}
-
 type Props = {
     children: ReactNode
 }
@@ -36,4 +32,8 @@ export const SessionProvider: FC<Props> = ({children}) => {
             {children}
         </SessionContext.Provider>
     );
+}
+
+export const useSession = () => {
+    return useContext(SessionContext);
 }

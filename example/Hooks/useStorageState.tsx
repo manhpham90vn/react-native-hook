@@ -41,7 +41,7 @@ const useAsyncState = <T,>(): UseStateHook<T> => {
     return [state, update]
 }
 
-export async function setStorageItemAsync(key: string, value: string | null) {
+export const setStorageItemAsync = async (key: string, value: string | null) => {
     if (value == null) {
         await SecureStore.deleteItemAsync(key);
     } else {
@@ -49,7 +49,7 @@ export async function setStorageItemAsync(key: string, value: string | null) {
     }
 }
 
-export function useStorageState(key: string): UseStateHook<string> {
+export const useStorageState = (key: string): UseStateHook<string> => {
     // Public
     const [state, setState] = useAsyncState<string>();
 
