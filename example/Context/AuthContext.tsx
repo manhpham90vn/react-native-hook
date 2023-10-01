@@ -1,4 +1,4 @@
-import React, {createContext, Dispatch, FC, ReactNode, useContext, useReducer, useState} from "react";
+import React, {createContext, Dispatch, FC, ReactNode, useContext, useReducer} from "react";
 
 interface AuthState {
     isLogin: boolean

@@ -1,5 +1,5 @@
 import {Button, Text, View} from "react-native";
-import {SessionType, useSession} from "./SessionContext";
+import {SessionType, useSession} from "./Context/SessionContext";
 
 const Example11 = () => {
     const {signIn, signOut, data, isLoading} = useSession() as SessionType

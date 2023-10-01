@@ -1,5 +1,5 @@
 import {Button, Text, TextInput, View} from "react-native";
-import {login, logout, useAuth} from "./AuthContext";
+import {login, logout, useAuth} from "./Context/AuthContext";
 import {useState} from "react";
 
 const Example10 = () => {

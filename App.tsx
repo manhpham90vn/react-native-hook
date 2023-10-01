@@ -7,11 +7,11 @@ import Example6 from "./example/example6";
 import Example7 from "./example/example7";
 import Example8 from "./example/example8";
 import Example9 from "./example/example9";
-import {ThemeProvider} from "./example/ThemeContext";
+import {ThemeProvider} from "./example/Context/ThemeContext";
 import Example10 from "./example/example10";
-import {AuthProvider} from "./example/AuthContext";
+import {AuthProvider} from "./example/Context/AuthContext";
 import Example11 from "./example/example11";
-import {SessionProvider} from "./example/SessionContext";
+import {SessionProvider} from "./example/Context/SessionContext";
 
 export default function App() {
   return (

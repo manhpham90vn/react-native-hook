@@ -1,5 +1,5 @@
 import {createContext, FC, ReactNode, useContext} from "react";
-import {useStorageState} from "./useStorageState";
+import {useStorageState} from "../Hooks/useStorageState";
 
 export interface SessionType {
     signIn: () => void,

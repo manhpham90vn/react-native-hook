@@ -1,6 +1,6 @@
 import {Button, Text, View} from "react-native";
 import {useContext} from "react";
-import {ThemeContext, ThemeType} from "./ThemeContext";
+import {ThemeContext, ThemeType} from "./Context/ThemeContext";
 
 const Example9 = () => {
 
